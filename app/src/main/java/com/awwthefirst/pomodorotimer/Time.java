@@ -1,9 +1,15 @@
 package com.awwthefirst.pomodorotimer;
 
-public class Time {
+/**
+ * An immutable class which converts milliseconds into minutes and seconds.
+ */
+public final class Time {
     private final int minutes;
     private final int seconds;
 
+    /**
+     * @param milliseconds The number of milliseconds which object represents
+     */
     public Time(long milliseconds) {
         long totalSeconds = milliseconds / 1000;
         minutes = (int) (totalSeconds / 60);
@@ -18,6 +24,9 @@ public class Time {
         return minutes;
     }
 
+    /**
+     * @return a <code>String</code> with containing the minutes and seconds in a "00:00" format
+     */
     @Override
     public String toString() {
         String minutesString =

@@ -3,4 +3,6 @@
     <string name="start_timer_button">Start</string>
     <string name="end_timer_button">Finish</string>
     <string name="default_timer_text">25:00</string>
+    <string name="break_text">Break</string>
+    <string name="work_text">Working</string>
 </resources>

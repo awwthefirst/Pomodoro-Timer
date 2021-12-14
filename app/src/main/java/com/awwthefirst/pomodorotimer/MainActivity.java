@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-public class MainActivity extends AppCompatActivity { //TODO should be no hardcoded colors and strings
+public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private static final String CHANNEL_ID = "0";
@@ -58,13 +58,15 @@ public class MainActivity extends AppCompatActivity { //TODO should be no hardco
 
     private void switchToWorkTimer() {
         startWorkTimer();
-        sendNotification("Pomodoro Timer", "Back to work!");
+        sendNotification(getString(R.string.notification_title),
+                getString(R.string.notification_work_text));
     }
 
     private void switchToBreakTimer() {
         currentTimer = createCountDownTimer(BREAK_TIME, this::switchToWorkTimer);
         currentTimer.start();
-        sendNotification("Pomodoro Timer", "Time for a break!");
+        sendNotification(getString(R.string.notification_title),
+                getString(R.string.notification_break_text));
         modeTextView.setText(R.string.break_text);
     }
 
@@ -87,7 +89,7 @@ public class MainActivity extends AppCompatActivity { //TODO should be no hardco
     private void sendNotification(String title, String text) { //TODO needs a icon
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setSmallIcon(R.drawable.notification_icon)
                 .setContentTitle(title)
                 .setContentText(text)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)

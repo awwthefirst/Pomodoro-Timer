@@ -5,4 +5,7 @@
     <string name="default_timer_text">25:00</string>
     <string name="break_text">Break</string>
     <string name="work_text">Working</string>
+    <string name="notification_title">Pomodoro Timer</string>
+    <string name="notification_work_text">Back to work!</string>
+    <string name="notification_break_text">Time for a break!</string>
 </resources>

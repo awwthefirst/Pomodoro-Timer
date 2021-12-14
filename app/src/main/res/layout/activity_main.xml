@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e5fff5"
+    android:background="@color/light_green"
     tools:context=".MainActivity">
 
     <TextView
@@ -24,14 +24,15 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintVertical_bias="0.19999999"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/start_timer_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#206ADF"
+        android:backgroundTint="@color/blue"
         android:onClick="toggleTimer"
         android:text="@string/start_timer_button"
         android:textSize="28sp"
@@ -53,6 +54,7 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timer_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/timer_text_view"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
